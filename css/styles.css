@@ -6,8 +6,8 @@
 
 :root {
   --bg: #06131b;
-  --panel: rgba(235, 255, 255, 0.14);
-  --panel-strong: rgba(240, 255, 255, 0.24);
+  --panel: rgba(21, 21, 21, 0.14);
+  --panel-strong: rgba(42, 42, 42, 0.24);
   --line: rgba(255, 255, 255, 0.32);
   --text: #f6ffff;
   --muted: rgba(238, 255, 255, 0.78);
