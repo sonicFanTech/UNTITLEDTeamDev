@@ -168,5 +168,18 @@
       ],
       "needsBanner": true
     }
+        {
+      "title": "Project: Unstuffed",
+      "creator": "AlexFenixJRYT",
+      "url": "https://gamejolt.com/games/projectunstuffed/960829",
+      "description": "In this game, you play as James. A 26 year old person trying to investigate on Fazbear Entertainment. He finds this job which lets him get some money out of it, but he is not safe. Not at all",
+      "banner": "alex/Downloads/960829-qzic84ca-v4.webp",
+      "status": "Listed",
+      "tags": [
+        "FNAFATB",
+        "Sequel",
+      ],
+      "needsBanner": false
+    }
   ]
 }
