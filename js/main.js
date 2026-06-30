@@ -7,6 +7,196 @@ const memberList = document.querySelector('[data-member-list]');
 const memberCount = document.querySelector('[data-member-count]');
 const roleCount = document.querySelector('[data-role-count]');
 
+// Backup data only used when members.list cannot be reached.
+// Keep editing members.list first; this just stops the public page from showing an error.
+const FALLBACK_MEMBER_DATA = {
+  "members": [
+    {
+      "name": "Alex",
+      "roles": [
+        "Owner",
+        "Developer",
+        "Animator"
+      ]
+    },
+    {
+      "name": "Cristian Tillar",
+      "roles": [
+        "Discord Server Co-Owner",
+        "Developer",
+        "Animator",
+        "Voice Actor",
+        "Artist",
+        "Music Composer"
+      ]
+    },
+    {
+      "name": "DJ Musical Rares 22",
+      "roles": [
+        "Developer",
+        "Animator",
+        "Voice Actor",
+        "Artist"
+      ]
+    },
+    {
+      "name": "Hunx",
+      "roles": [
+        "Voice Actor",
+        "Artist"
+      ]
+    },
+    {
+      "name": "ReversalPlayer",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "WitheredBonnieINC",
+      "roles": [
+        "Voice Actor",
+        "Artist"
+      ]
+    },
+    {
+      "name": "Cyvix Z. Voxless",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "AbeMakesGames",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "Dashvan",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "Enjoyer Smith",
+      "roles": [
+        "Artist"
+      ]
+    },
+    {
+      "name": "German Tank Gotta Sweep",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "portal2half",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "JulianHRROR",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "TimmingCulture",
+      "roles": [],
+      "note": "Role TBD"
+    },
+    {
+      "name": "AdelaMartinica",
+      "roles": [
+        "Voice Actor",
+        "Artist"
+      ]
+    },
+    {
+      "name": "Ethan Young",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "GK",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "Surov0990",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "BOOSH",
+      "roles": [
+        "Animator"
+      ]
+    },
+    {
+      "name": "Kippers",
+      "roles": [
+        "Developer",
+        "Voice Actor",
+        "Artist"
+      ]
+    },
+    {
+      "name": "le charmander withe gune",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "Lee :D",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "ORION",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "Rexab Rabbit",
+      "roles": [
+        "Voice Actor"
+      ]
+    },
+    {
+      "name": "TerrybleCode",
+      "roles": [
+        "Developer"
+      ]
+    },
+    {
+      "name": "Yeckim",
+      "roles": [
+        "Developer",
+        "Animator"
+      ]
+    },
+    {
+      "name": "Mike",
+      "roles": [
+        "Artist"
+      ]
+    },
+    {
+      "name": "Acorn",
+      "roles": [
+        "Artist"
+      ]
+    }
+  ]
+};
+
 function updateHeader() {
   if (!header) return;
   header.classList.toggle('is-scrolled', window.scrollY > 24);
@@ -82,29 +272,42 @@ function renderMembers(members) {
   if (roleCount) roleCount.textContent = String(roles.size);
 }
 
+async function readMemberFile(source) {
+  const response = await fetch(source, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`${source} returned ${response.status}`);
+
+  const text = await response.text();
+  return JSON.parse(text);
+}
+
 async function loadMembers() {
   if (!memberList) return;
 
-  const source = memberList.dataset.memberSource || 'members.list';
+  const primarySource = memberList.dataset.memberSource || 'members.list';
+  const backupSources = [
+    primarySource,
+    './members.list',
+    'members.list',
+    './data/members.list',
+    'data/members.list',
+    './members.json',
+    'members.json'
+  ];
 
-  try {
-    const response = await fetch(source, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`Could not load ${source}`);
+  const sources = [...new Set(backupSources)];
 
-    const text = await response.text();
-    const data = JSON.parse(text);
-    renderMembers(normalizeMembers(data));
-  } catch (error) {
-    memberList.innerHTML = `
-      <article class="member-card glass-panel member-error">
-        <h3>Member list could not load</h3>
-        <p>Check that <code>${escapeHTML(source)}</code> exists and is valid JSON. If you opened the site by double-clicking the HTML file, try running it through a local server or GitHub Pages.</p>
-      </article>
-    `;
-    if (memberCount) memberCount.textContent = '--';
-    if (roleCount) roleCount.textContent = '--';
-    console.warn(error);
+  for (const source of sources) {
+    try {
+      const data = await readMemberFile(source);
+      renderMembers(normalizeMembers(data));
+      return;
+    } catch (error) {
+      console.warn(`Member source failed: ${source}`, error);
+    }
   }
+
+  // Last-resort fallback so the live page still shows the team instead of an error box.
+  renderMembers(normalizeMembers(FALLBACK_MEMBER_DATA));
 }
 
 loadMembers();
