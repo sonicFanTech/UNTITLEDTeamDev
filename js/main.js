@@ -328,15 +328,16 @@ const FALLBACK_GAME_DATA = {
   "note": "This is JSON saved as .list on purpose. Edit this file to add, remove, reorder, or update games on the website.",
   "games": [
     {
-      "title": "Mehoy Menoy",
+      "title": "doodle bob goes insane",
       "creator": "bartish behaviour",
       "url": "https://gamejolt.com/games/mehoy-menoy/1059054",
-      "description": "A GameJolt project from bartish behaviour. The page is linked here while the team waits on a final banner and short creator-written pitch.",
+      "description": "A GameJolt project listed for the team. The public page does not have a real project pitch yet, so this card keeps the link live until the creator sends a banner and description.",
       "banner": "",
-      "status": "Listed",
+      "status": "Details Needed",
       "tags": [
         "GameJolt",
-        "Details Needed"
+        "Placeholder",
+        "Needs Info"
       ],
       "needsBanner": true
     },
@@ -344,7 +345,7 @@ const FALLBACK_GAME_DATA = {
       "title": "Five Nights at Musical Rares 22 - 1 (FNaMR22-1)",
       "creator": "The Mr. DJ22",
       "url": "https://gamejolt.com/games/FNaMR22-1/971498",
-      "description": "Survive five nights inside Musical's Pizza Party World. The job looks simple until the characters start acting alive.",
+      "description": "Try to survive five nights inside Musical's Pizza Party World. The job looks simple until the characters start acting alive.",
       "banner": "assets/images/GameBanners/FNaMR22-1.webp",
       "status": "Available",
       "tags": [
@@ -358,7 +359,7 @@ const FALLBACK_GAME_DATA = {
       "title": "Billy's Theatre Show ACT-1",
       "creator": "The Mr. DJ22",
       "url": "https://gamejolt.com/games/BTSACT-1OO/1031704",
-      "description": "After losing Rodger's Pizza Playhouse, Andrés takes a job at the theatre that stole his character. The past follows him there, and the story ties into the FFD Saga.",
+      "description": "Andrés loses Rodger's Pizza Playhouse, then takes a job at the theatre that stole his character. The past follows him there, and the story connects to the FFD Saga.",
       "banner": "assets/images/GameBanners/BTS_ACT1.webp",
       "status": "Available",
       "tags": [
@@ -386,7 +387,7 @@ const FALLBACK_GAME_DATA = {
       "title": "Fishery's Family Diner (Classic)",
       "creator": "CSB",
       "url": "https://gamejolt.com/games/FFD1Classic/960353",
-      "description": "A financially desperate night guard takes a job at an animatronic restaurant with a very bad history.",
+      "description": "You need money, so you take a night guard job at an animatronic restaurant with a rough history.",
       "banner": "",
       "status": "Listed",
       "tags": [
@@ -414,13 +415,13 @@ const FALLBACK_GAME_DATA = {
       "title": "Fishery's Family Diner 3",
       "creator": "CSB",
       "url": "https://gamejolt.com/games/FFD3/977501",
-      "description": "In 1996, Daniel Stephans is hired to watch a horror attraction built around the mysteries of the older diner.",
+      "description": "In 1996, Daniel Stephans is hired to guard a horror attraction built around the mysteries of the older diner.",
       "banner": "",
       "status": "Listed",
       "tags": [
         "Horror Attraction",
         "FNaF Fan Game",
-        "Demo"
+        "Mystery"
       ],
       "needsBanner": true
     },
@@ -428,7 +429,7 @@ const FALLBACK_GAME_DATA = {
       "title": "Fishery's Family Diner 4",
       "creator": "CSB",
       "url": "https://gamejolt.com/games/FFD4/1007523",
-      "description": "In 2008, Jena takes a job at a new horror attraction based on the still-unsolved Fishery's Family Diner case.",
+      "description": "Jena gets hired at a new horror attraction based on the unsolved crimes and mysteries of Fishery's Family Diner.",
       "banner": "",
       "status": "Listed",
       "tags": [
@@ -442,12 +443,12 @@ const FALLBACK_GAME_DATA = {
       "title": "Fishery's Family Diner 5",
       "creator": "CSB",
       "url": "https://gamejolt.com/games/ffd5welcometothemechanichell/1015509",
-      "description": "Ronald, a 26-year-old investigator, reopens a dropped case and follows what remains of the story back to the factory.",
+      "description": "An investigator follows what remains of the Fishery's Family Diner case into the mechanic hell.",
       "banner": "",
-      "status": "Early Access / Teaser",
+      "status": "Listed",
       "tags": [
-        "Free Roam",
-        "Chapters",
+        "Investigation",
+        "Mechanic Hell",
         "Horror"
       ],
       "needsBanner": true
@@ -456,13 +457,13 @@ const FALLBACK_GAME_DATA = {
       "title": "Fishery's Family Diner Overhaul",
       "creator": "CSB",
       "url": "https://gamejolt.com/games/ffdoverhaul/1018072",
-      "description": "An overhaul slot for the Fishery's Family Diner series. Drop in the official short pitch and banner when the creator sends them over.",
+      "description": "An overhaul slot for the Fishery's Family Diner series. Add the official creator pitch and banner here when they are ready.",
       "banner": "",
-      "status": "Listed",
+      "status": "Details Needed",
       "tags": [
         "Overhaul",
         "FNaF Fan Game",
-        "Details Needed"
+        "Needs Info"
       ],
       "needsBanner": true
     },
@@ -470,15 +471,126 @@ const FALLBACK_GAME_DATA = {
       "title": "Wyre",
       "creator": "reese's pieces",
       "url": "https://gamejolt.com/games/wyre/1057498",
-      "description": "A wire-connection puzzle game about opening the way forward. More creator-provided text can be added later.",
+      "description": "A GameJolt project from reese's pieces. The card is ready for the official short pitch and banner once the creator sends them in.",
+      "banner": "",
+      "status": "Details Needed",
+      "tags": [
+        "GameJolt",
+        "Needs Info"
+      ],
+      "needsBanner": true
+    },
+    {
+      "title": "Project: Unstuffed",
+      "creator": "yobuddyalex",
+      "url": "https://gamejolt.com/games/projectunstuffed/960829",
+      "description": "A fast-moving FNaF-style fan project from yobuddyalex. The GameJolt page includes a flashing-lights warning, so players should check the page before playing.",
       "banner": "",
       "status": "Listed",
       "tags": [
-        "Puzzle",
+        "FNaF Fan Game",
         "GameJolt",
+        "Flashing Lights"
+      ],
+      "needsBanner": true
+    },
+    {
+      "title": "Nights at Felix's Remastered",
+      "creator": "yobuddyalex",
+      "url": "https://gamejolt.com/games/naf-r/1078611",
+      "description": "A remastered Nights at Felix's project from yobuddyalex. More details can be filled in when the creator sends the final pitch and banner.",
+      "banner": "",
+      "status": "Listed",
+      "tags": [
+        "Remaster",
+        "FNaF Fan Game",
         "Details Needed"
       ],
       "needsBanner": true
+    },
+    {
+      "title": "FNaF: Re-clicked",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/FNaF-Re-clicked-SERIES/936494",
+      "description": "A reimagined take on the classic FNaF games, built around smarter AI, new mechanics, and the same old pressure of making it through the night.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/reclicked.webp",
+      "status": "SFG Archive",
+      "tags": [
+        "SFG",
+        "FNaF Fan Game",
+        "Reimagined"
+      ],
+      "needsBanner": false
+    },
+    {
+      "title": "Five Nights at Freddy's: The Movie Edition",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/FNaF_The-Movie-Edition/912978",
+      "description": "A cinematic FNaF fan-game entry inspired by the movie universe.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/FNaF_TMGE_LOGO.png",
+      "status": "SFG",
+      "tags": [
+        "SFG",
+        "FNaF",
+        "Movie Edition"
+      ],
+      "needsBanner": false
+    },
+    {
+      "title": "BLOXORZ - Remake",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/BLOXORZ/964697",
+      "description": "A faithful fan remake of the classic Flash puzzle game, with the 33 original levels plus extra custom levels.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/BLOXORZ_LOGO.png",
+      "status": "SFG",
+      "tags": [
+        "Puzzle",
+        "Remake",
+        "Flash Game"
+      ],
+      "needsBanner": false
+    },
+    {
+      "title": "Portal 1 & 2: The Clickteam Version",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/Portal_2D/987767",
+      "description": "Portal 1 and Portal 2 rebuilt in 2D with Clickteam Fusion, including custom levels and extra fan-made content.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/PORTAL2D_LOGO.png",
+      "status": "SFG",
+      "tags": [
+        "Portal",
+        "2D",
+        "Clickteam"
+      ],
+      "needsBanner": false
+    },
+    {
+      "title": "One Night at Freddy's",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/OneNightATFreddys/991207",
+      "description": "FNaF 1 compressed into one randomized night, with AI and night behavior changing every run.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/Logo_ONaF.png",
+      "status": "SFG",
+      "tags": [
+        "FNaF",
+        "Randomized",
+        "One Night"
+      ],
+      "needsBanner": false
+    },
+    {
+      "title": "DELTARUNE CTF Re-Make",
+      "creator": "sonic Fan Games",
+      "url": "https://gamejolt.com/games/DELTARUNE-CTFRM/1010580",
+      "description": "A fan-made remake of DELTARUNE Chapter 1 in Clickteam Fusion, with extra custom touches added on top.",
+      "banner": "assets/images/GameBanners/Cyvix_SFG/DELTA_STEAM_RE-MAKE_LOGO.png",
+      "status": "SFG",
+      "tags": [
+        "DELTARUNE",
+        "Remake",
+        "Clickteam"
+      ],
+      "needsBanner": false
     },
     {
       "title": "Five Nights at Musical Rares 22 - 2 \"A Factory That Falls\"",
@@ -491,6 +603,20 @@ const FALLBACK_GAME_DATA = {
         "FNaMR",
         "Sequel",
         "Factory"
+      ],
+      "needsBanner": true
+    },
+    {
+      "title": "8001",
+      "creator": "Unknown Creator",
+      "url": "https://gamejolt.com/games/8001/1074886",
+      "description": "A requested GameJolt listing from the updated team list. The project page does not have enough public info yet, so this stays as a simple link until the creator sends details.",
+      "banner": "",
+      "status": "Extra Link",
+      "tags": [
+        "GameJolt",
+        "Requested",
+        "Details Needed"
       ],
       "needsBanner": true
     }

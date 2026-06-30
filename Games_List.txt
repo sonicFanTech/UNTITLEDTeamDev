@@ -39,7 +39,24 @@ GameJolt Link: https://gamejolt.com/games/wyre/1057498
 short description: NA
 Banner: NA
 
+
+Creator: yobuddyalex
+Games: Project: Unstuffed - https://gamejolt.com/games/projectunstuffed/960829
+       Nights at Felix's Remastered - https://gamejolt.com/games/naf-r/1078611
+short description: NA
+Banner: NA
+
+
+Creator: sonic Fan Games
+SFG Games Page: https://sonicfantech.org/Site/SFG/ [Take all GameJolt Links, and short descriptions, the Banner images are at: assets\images\GameBanners\Cyvix_SFG}
+short description: NA
+Banner: NA
+
 Random Links: https://gamejolt.com/games/FNaMR22-2/971546
+              https://gamejolt.com/games/8001/1074886 [This one doesn't really have anything, it's just here cuz the game's creator wanted it listed on the UT Website]
+
+
+
 
 [FOR ChatGPT, if you can go to any of these GameJolt Lins and somehow pull 
 images and a little description and a banner image for all of the ones that don't have one listed in this file, cuz
