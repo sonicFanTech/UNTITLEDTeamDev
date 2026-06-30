@@ -14,7 +14,7 @@
       "roles": [
         "Discord Server Co-Owner",
         "Developer",
-		"Modeler",
+        "Modeler",
         "Animator",
         "Voice Actor",
         "Artist",
@@ -84,7 +84,7 @@
       "name": "portal2half",
       "roles": [
         "Developer",
-		"Modeler"
+        "Modeler"
       ]
     },
     {
@@ -95,7 +95,9 @@
     },
     {
       "name": "TimmingCulture",
-      "roles": "Modeler"
+      "roles": [
+        "Modeler"
+      ]
     },
     {
       "name": "AdelaMartinica",
@@ -126,7 +128,7 @@
       "name": "BOOSH",
       "roles": [
         "Animator",
-		""Modeler"
+        "Modeler"
       ]
     },
     {
@@ -172,7 +174,7 @@
       "roles": [
         "Developer",
         "Animator",
-		"Modeler"
+        "Modeler"
       ]
     },
     {
