@@ -166,6 +166,7 @@ p {
 
 .nav-link,
 .discord-link,
+.community-link,
 .button,
 .music-toggle,
 .menu-toggle {
@@ -177,7 +178,8 @@ p {
 }
 
 .nav-link,
-.discord-link {
+.discord-link,
+.community-link {
   padding: 0.72rem 0.9rem;
   border-radius: 14px;
   font-size: 0.84rem;
@@ -187,6 +189,7 @@ p {
 
 .nav-link:hover,
 .discord-link:hover,
+.community-link:hover,
 .nav-link.active {
   transform: translateY(-2px);
   border-color: rgba(57, 245, 255, 0.75);
@@ -195,6 +198,10 @@ p {
 
 .discord-link {
   background: linear-gradient(180deg, rgba(92, 122, 255, 0.68), rgba(71, 72, 205, 0.56));
+}
+
+.community-link {
+  background: linear-gradient(180deg, rgba(124, 255, 186, 0.64), rgba(36, 149, 110, 0.54));
 }
 
 .menu-toggle {
@@ -338,6 +345,10 @@ h3 {
   margin-top: 1.6rem;
 }
 
+.compact-actions {
+  margin-top: 1.2rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -363,6 +374,12 @@ h3 {
 
 .button.ghost {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.23), rgba(255, 255, 255, 0.08));
+}
+
+.button.gamejolt {
+  background: linear-gradient(180deg, rgba(124, 255, 186, 0.88), rgba(41, 174, 116, 0.72));
+  color: #031710;
+  text-shadow: none;
 }
 
 .button.small {
@@ -486,6 +503,38 @@ h3 {
 .member-card p {
   margin-bottom: 0;
   font-size: 0.84rem;
+}
+
+.member-card code {
+  color: #ffffff;
+}
+
+.member-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.member-roles span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.38rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+}
+
+.member-loading,
+.member-empty,
+.member-error {
+  grid-column: 1 / -1;
+}
+
+.member-error {
+  border-color: rgba(255, 101, 217, 0.72);
 }
 
 .sub-hero {
@@ -673,7 +722,8 @@ h3 {
   }
 
   .nav-link,
-  .discord-link {
+  .discord-link,
+  .community-link {
     text-align: center;
   }
 
