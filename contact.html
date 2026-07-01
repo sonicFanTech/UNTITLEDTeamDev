@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact / Help / Jobs | UNTITLED TEAM</title>
-  <meta name="description" content="Contact UNTITLED TEAM, find community links, read server rules, and check what roles may help the team.">
-  <link rel="preload" href="assets/Font/Main_Font_MCUIE.ttf" as="font" type="font/ttf" crossorigin>
+  <title>Contact / Join Requests | UNTITLED TEAM</title>
+  <meta name="description" content="Contact UNTITLED TEAM and request access to the Discord server by email.">
+  <link rel="preload" href="assets/Font/Main_Font_MCUIE.ttf" as="font" type="font/ttf" crossorigin="">
   <link rel="icon" href="assets/images/site_logo_2_scroll.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,46 +11,119 @@
   <div class="ambient-grid" aria-hidden="true"></div>
   <img class="corner-character" src="assets/images/the-creation_Left-bottm_C.png" alt="">
 
-  <header class="site-header" data-header>
+  <header class="site-header is-scrolled" data-header="">
     <a class="brand" href="index.html" aria-label="UNTITLED TEAM home">
       <img class="brand-main" src="assets/images/Site-logo_Main.png" alt="UNTITLED TEAM">
       <img class="brand-scroll" src="assets/images/site_logo_2_scroll.png" alt="UNTITLED TEAM">
     </a>
-    <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation">Menu</button>
-    <nav class="main-nav" data-nav>
+    <button class="menu-toggle" type="button" data-menu-toggle="" aria-label="Open navigation">Menu</button>
+    <nav class="main-nav" data-nav="">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link" href="games.html">Games</a>
-      <a class="nav-link active" href="contact.html">Contact / Help / Jobs</a>
+      <a class="nav-link active" href="contact.html">Contact / Join Requests</a>
       <a class="community-link" href="https://gamejolt.com/c/UntitledTeam-zemf3v/general" target="_blank" rel="noopener noreferrer">GameJolt</a>
-      <a class="discord-link" href="https://discord.gg/DcvFrMw9Rr" target="_blank" rel="noopener noreferrer">Discord</a>
     </nav>
   </header>
 
   <main>
     <section class="sub-hero contact-hero">
       <div class="glass-panel page-title-card">
-        <p class="eyebrow">Community</p>
-        <h1>Contact / Help / Jobs</h1>
-        <p>Want to ask something, help with a project, or just follow the team? Discord is the fastest place to talk, and GameJolt is there for the public community side.</p>
+        <p class="eyebrow">Contact</p>
+        <h1>Contact / Join Requests</h1>
+        <p>The public Discord invite is not posted on the site anymore. To join, send a request to the team email first.</p>
         <div class="hero-actions compact-actions">
-          <a class="button primary" href="https://discord.gg/DcvFrMw9Rr" target="_blank" rel="noopener noreferrer">Open Discord Server</a>
+          <a class="button primary" href="mailto:untitledteamsupport@gmail.com?subject=UNTITLED%20TEAM%20Discord%20Join%20Request">Email UNTITLED TEAM</a>
+          <button class="button ghost" type="button" data-copy-support-email="">Copy Email</button>
           <a class="button gamejolt" href="https://gamejolt.com/c/UntitledTeam-zemf3v/general" target="_blank" rel="noopener noreferrer">Open GameJolt Community</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section-shell join-request-section" id="join-request">
+      <div class="section-heading with-action">
+        <div>
+          <p class="eyebrow">Discord access</p>
+          <h2>Request an invite by email</h2>
+        </div>
+        <a class="button small" href="mailto:untitledteamsupport@gmail.com">untitledteamsupport@gmail.com</a>
+      </div>
+
+      <div class="contact-request-layout">
+        <form class="glass-panel join-request-card contact-form" data-join-form="">
+          <p class="form-intro">Fill this out and the site will open your email app with a message already written to <strong>untitledteamsupport@gmail.com</strong>. The website itself does not save or send anything.</p>
+
+          <div class="form-grid">
+            <label class="field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="What should the team call you?" required>
+            </label>
+
+            <label class="field">
+              <span>Your email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+
+            <label class="field">
+              <span>Discord username</span>
+              <input type="text" name="discord" placeholder="username or display name">
+            </label>
+
+            <label class="field">
+              <span>I want to help as</span>
+              <select name="role">
+                <option value="">Pick one</option>
+                <option>Developer</option>
+                <option>Artist</option>
+                <option>Animator</option>
+                <option>Voice Actor</option>
+                <option>Music Composer</option>
+                <option>Tester</option>
+                <option>Writer</option>
+                <option>Community Helper</option>
+                <option>Fan / Supporter</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label class="field full">
+              <span>Why do you want to join?</span>
+              <textarea name="message" rows="7" placeholder="Tell the team what you want to help with, what projects you like, or anything else they should know." required></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">Create Email Request</button>
+            <button class="button ghost" type="button" data-copy-email-draft="">Copy Draft</button>
+          </div>
+
+          <p class="form-status" data-join-status="">After you press Create Email Request, check your email app before sending.</p>
+          <textarea class="email-preview" data-email-preview="" readonly aria-label="Generated email preview"></textarea>
+        </form>
+
+        <aside class="glass-panel contact-side-card">
+          <h3>What to include</h3>
+          <ul>
+            <li>Your Discord username or display name.</li>
+            <li>What role you want: dev, art, animation, voice acting, music, testing, writing, or community help.</li>
+            <li>A short reason for joining so the owner can tell real requests apart from spam.</li>
+          </ul>
+          <p>No public invite means random people are less likely to join just to cause problems.</p>
+        </aside>
       </div>
     </section>
 
     <section class="section-shell contact-grid" id="jobs">
       <article class="glass-panel info-card">
         <h2>Need help?</h2>
-        <p>Ask in the server for project questions, channels, game media, or support. Put things in the right place so the server does not turn into one messy general chat.</p>
+        <p>Email the team if you need project info, game media help, or support. Clear messages are easier to answer.</p>
       </article>
       <article class="glass-panel info-card">
         <h2>Want to join?</h2>
-        <p>Developers, animators, voice actors, artists, music composers, testers, writers, and community helpers can all be useful. Ask first, because open roles can change.</p>
+        <p>Developers, animators, voice actors, artists, music composers, testers, writers, and community helpers can all be useful. Open roles can change.</p>
       </article>
       <article class="glass-panel info-card">
         <h2>Posting stuff</h2>
-        <p>Screenshots, videos, memes, bots, self-promo, venting, and game progress each have their own spots. Using the right channel makes updates easier to find later.</p>
+        <p>Once accepted, keep screenshots, videos, memes, bots, self-promo, venting, and game progress in the right places so updates stay easy to find.</p>
       </article>
     </section>
 
@@ -86,19 +157,19 @@
     </section>
   </main>
 
-  <button class="music-toggle" type="button" data-music-toggle aria-label="Toggle background music">Music: Off</button>
-  <audio data-bg-audio loop preload="none" src="assets/Audio/BG_Music.mp3"></audio>
+  <button class="music-toggle" type="button" data-music-toggle="" aria-label="Toggle background music">Music: Off</button>
+  <audio data-bg-audio="" loop="" preload="none" src="assets/Audio/BG_Music.mp3"></audio>
 
   <footer class="site-footer">
     <p>UNTITLED TEAM</p>
     <div>
       <a href="index.html">Home</a>
       <a href="games.html">Games</a>
+      <a href="contact.html">Contact</a>
       <a href="https://gamejolt.com/c/UntitledTeam-zemf3v/general" target="_blank" rel="noopener noreferrer">GameJolt</a>
-      <a href="https://discord.gg/DcvFrMw9Rr" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="mailto:untitledteamsupport@gmail.com">Email</a>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-</body>
-</html>
+</body></html>

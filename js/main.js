@@ -607,6 +607,34 @@ const FALLBACK_GAME_DATA = {
       "needsBanner": true
     },
     {
+      "title": "JOLLY: Revival",
+      "creator": "Mouse-avi",
+      "url": "https://gamejolt.com/games/aasb_but_no_jollibees/824255",
+      "description": "NA",
+      "banner": "",
+      "status": "Extra Link",
+      "tags": [
+        "FNaMR",
+        "Sequel",
+        "Factory"
+      ],
+      "needsBanner": true
+    },
+    {
+      "title": "JOLLY: Revival",
+      "creator": "Mouse-avi",
+      "url": "https://gamejolt.com/games/trtf_trc/776472",
+      "description": "NA",
+      "banner": "",
+      "status": "Extra Link",
+      "tags": [
+        "FNaMR",
+        "Sequel",
+        "Factory"
+      ],
+      "needsBanner": true
+    },
+    {
       "title": "8001",
       "creator": "Unknown Creator",
       "url": "https://gamejolt.com/games/8001/1074886",
@@ -796,6 +824,116 @@ async function loadGames() {
 }
 
 loadGames();
+
+
+const joinForm = document.querySelector('[data-join-form]');
+const joinStatus = document.querySelector('[data-join-status]');
+const emailPreview = document.querySelector('[data-email-preview]');
+const copyEmailButton = document.querySelector('[data-copy-support-email]');
+const copyDraftButton = document.querySelector('[data-copy-email-draft]');
+const SUPPORT_EMAIL = 'untitledteamsupport@gmail.com';
+
+function getJoinEmailDraft() {
+  if (!joinForm) return { subject: 'UNTITLED TEAM Discord Join Request', body: '' };
+
+  const formData = new FormData(joinForm);
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const discord = String(formData.get('discord') || '').trim();
+  const role = String(formData.get('role') || '').trim();
+  const message = String(formData.get('message') || '').trim();
+
+  const subjectName = name || discord || 'New Request';
+  const subject = `UNTITLED TEAM Discord Join Request - ${subjectName}`;
+  const body = [
+    'Hello UNTITLED TEAM,',
+    '',
+    'I want to request access to the UNTITLED TEAM Discord server.',
+    '',
+    `Name: ${name || 'Not provided'}`,
+    `Contact email: ${email || 'Not provided'}`,
+    `Discord username: ${discord || 'Not provided'}`,
+    `I want to help as: ${role || 'Not selected'}`,
+    '',
+    'Message / why I want to join:',
+    message || 'Not provided',
+    '',
+    'Thanks!'
+  ].join('\n');
+
+  return { subject, body };
+}
+
+function updateEmailPreview() {
+  if (!emailPreview || !joinForm) return;
+  const draft = getJoinEmailDraft();
+  emailPreview.value = `To: ${SUPPORT_EMAIL}\nSubject: ${draft.subject}\n\n${draft.body}`;
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return true;
+  }
+
+  const helper = document.createElement('textarea');
+  helper.value = text;
+  helper.setAttribute('readonly', '');
+  helper.style.position = 'fixed';
+  helper.style.left = '-9999px';
+  document.body.appendChild(helper);
+  helper.select();
+  const copied = document.execCommand('copy');
+  helper.remove();
+  return copied;
+}
+
+if (joinForm) {
+  joinForm.addEventListener('input', updateEmailPreview);
+  updateEmailPreview();
+
+  joinForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if (!joinForm.checkValidity()) {
+      joinForm.reportValidity();
+      return;
+    }
+
+    const draft = getJoinEmailDraft();
+    updateEmailPreview();
+
+    const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+    window.location.href = mailto;
+
+    if (joinStatus) {
+      joinStatus.textContent = 'Your email app should open with the request filled in. If nothing opens, copy the draft below and send it manually.';
+    }
+  });
+}
+
+if (copyEmailButton) {
+  copyEmailButton.addEventListener('click', async () => {
+    try {
+      await copyText(SUPPORT_EMAIL);
+      if (joinStatus) joinStatus.textContent = 'Support email copied.';
+    } catch (error) {
+      if (joinStatus) joinStatus.textContent = SUPPORT_EMAIL;
+    }
+  });
+}
+
+if (copyDraftButton) {
+  copyDraftButton.addEventListener('click', async () => {
+    updateEmailPreview();
+    try {
+      await copyText(emailPreview ? emailPreview.value : getJoinEmailDraft().body);
+      if (joinStatus) joinStatus.textContent = 'Email draft copied. Paste it into Gmail or another mail app and send it to the support email.';
+    } catch (error) {
+      if (joinStatus) joinStatus.textContent = 'Could not copy automatically. You can still select and copy the draft text below.';
+    }
+  });
+}
 
 
 if (musicToggle && audio) {
